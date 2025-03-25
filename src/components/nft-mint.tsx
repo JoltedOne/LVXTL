@@ -261,7 +261,7 @@ export function NftMint(props: Props) {
             asChild
             className="bg-gray-999 text-white hover:bg-gray-900 flex-1"
           >
-            <a href="https://www.fractalvisions.io/collections/0x5346b69c7277156881768d26b2c98817408d5085/collection" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.fractalvisions.io/collections/0x93658198a45f5d14af234708a8333b0f78ae20e1/collection" target="_blank" rel="noopener noreferrer">
               Fractal Visions Marketplace
             </a>
           </Button>
