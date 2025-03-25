@@ -74,7 +74,7 @@ export function NftMint(props: Props) {
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       >
-        <source src="/xtllabg.webm" type="video/webm" />
+        <source src="/sdstnBG.webm" type="video/webm" />
         Your browser does not support the video tag.
       </video>
 
@@ -91,19 +91,19 @@ export function NftMint(props: Props) {
         {/* GIF with Hover Effect */}
         <div className="mt-24 sm:mt-20 mb-6 group max-w-md w-full">
           <img
-            src="/xtllatextbase.gif"
+            src="/ststnbasetxt.gif"
             alt="Base GIF"
             className="w-full h-auto group-hover:hidden"
           />
           <img
-            src="/xtllatextlight.gif"
+            src="/SDSTNhover.gif"
             alt="Hover GIF"
             className="w-full h-auto hidden group-hover:block"
           />
         </div>
 
         {/* Card */}
-        <Card className="w-full max-w-md bg-gray-800">
+        <Card className="w-full max-w-md bg-gray-999">
           <CardContent className="pt-6">
             <div className="aspect-square overflow-hidden rounded-lg mb-4 relative">
               {props.isERC1155 ? (
@@ -197,7 +197,7 @@ export function NftMint(props: Props) {
           <CardFooter>
             {account ? (
               <ClaimButton
-                theme={"light"}
+                theme={"dark"}
                 contractAddress={props.contract.address}
                 chain={props.contract.chain}
                 client={props.contract.client}
@@ -225,7 +225,7 @@ export function NftMint(props: Props) {
                         }
                 }
                 style={{
-                  backgroundColor: "black",
+                  backgroundColor: "#111827",
                   color: "white",
                   width: "100%",
                 }}
@@ -251,7 +251,7 @@ export function NftMint(props: Props) {
         <div className="mt-6 flex flex-col sm:flex-row gap-4 max-w-md w-full">
           <Button
             asChild
-            className="bg-gray-800 text-white hover:bg-gray-700 flex-1"
+            className="bg-gray-999 text-white hover:bg-gray-900 flex-1"
           >
             <a href="https://jolted.one" target="_blank" rel="noopener noreferrer">
               Physical Shop
@@ -259,7 +259,7 @@ export function NftMint(props: Props) {
           </Button>
           <Button
             asChild
-            className="bg-gray-800 text-white hover:bg-gray-700 flex-1"
+            className="bg-gray-999 text-white hover:bg-gray-900 flex-1"
           >
             <a href="https://www.fractalvisions.io/collections/0x5346b69c7277156881768d26b2c98817408d5085/collection" target="_blank" rel="noopener noreferrer">
               Fractal Visions Marketplace
