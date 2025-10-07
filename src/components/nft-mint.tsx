@@ -130,7 +130,7 @@ export function NftMint(props: Props) {
                   className="w-full h-full object-cover"
                   alt=""
                   src={
-                    props.contractImage || "/lvxtlcover.gif?height=480&width=397"
+                    props.contractImage || "/lvxtlplaceholder.webm?height=480&width=397"
                   }
                 />
               )}
