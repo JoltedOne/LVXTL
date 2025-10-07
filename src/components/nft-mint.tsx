@@ -84,7 +84,7 @@ export function NftMint(props: Props) {
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       >
-        <source src="/sdstnBG.webm" type="video/webm" />
+        <source src="/LVXTLbg.webm" type="video/webm" />
         Your browser does not support the video tag.
       </video>
 
@@ -98,22 +98,22 @@ export function NftMint(props: Props) {
 
       {/* Content (GIF, Card, Buttons, and Toast) */}
       <div className="relative z-20 flex flex-col items-center justify-center">
-        {/* GIF with Hover Effect */}
-        <div className="mt-24 sm:mt-20 mb-6 group max-w-md w-full">
+        {/* GIF with Hover Fade Effect */}
+        <div className="mt-24 sm:mt-20 mb-6 group max-w-md w-full relative overflow-hidden rounded-lg aspect-video"> {/* Added aspect-video for consistent sizing; adjust as needed (e.g., aspect-square for 1:1) */}
           <img
-            src="/ststnbasetxt.gif"
+            src="/LVXTLlogostatic.gif"
             alt="Base GIF"
-            className="w-full h-auto group-hover:hidden"
+            className="absolute inset-0 w-full h-full object-contain opacity-100 group-hover:opacity-0 transition-opacity duration-300 ease-in-out"
           />
           <img
-            src="/SDSTNhover.gif"
+            src="/LVXTLlogoactive.gif"
             alt="Hover GIF"
-            className="w-full h-auto hidden group-hover:block"
+            className="absolute inset-0 w-full h-full object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
           />
         </div>
 
         {/* Card */}
-        <Card className="w-full max-w-md bg-gray-999">
+        <Card className="w-full max-w-md bg-gray-999 border border-lime-500/90 outline outline-1 outline-lime-500/30 outline-offset-4 custom-frame-border">
           <CardContent className="pt-6">
             <div className="aspect-square overflow-hidden rounded-lg mb-4 relative">
               {props.isERC1155 ? (
@@ -134,22 +134,22 @@ export function NftMint(props: Props) {
                   }
                 />
               )}
-              <div className="absolute top-2 right-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded-full text-sm font-semibold">
+              <div className="absolute top-2 right-2 bg-black bg-opacity-50 text-lime-500 px-2 py-1 rounded-full text-sm font-semibold">
                 {props.pricePerToken} {props.currencySymbol}/each
               </div>
             </div>
             {/* Total Claimed Display */}
-            <div className="text-white text-sm mb-4">
+            <div className="text-lime-500 text-sm mb-4">
               {isSupplyLoading ? (
                 "Loading supply..."
               ) : (
                 <>Total Claimed: {totalSupply ? totalSupply.toString() : "0"}</>
               )}
             </div>
-            <h2 className="text-2xl font-bold mb-2 text-white">
+            <h2 className="text-2xl font-bold mb-2 text-lime-500">
               {props.displayName}
             </h2>
-            <p className="text-white mb-4">{props.description}</p>
+            <p className="text-lime-500 mb-4">{props.description}</p>
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center">
                 <Button
@@ -158,15 +158,15 @@ export function NftMint(props: Props) {
                   onClick={decreaseQuantity}
                   disabled={quantity <= 1}
                   aria-label="Decrease quantity"
-                  className="rounded-r-none"
+                  className="rounded-r-none bg-lime-700/90 hover: bg-lime-500/90"
                 >
-                  <Minus className="h-4 w-4" />
+                  <Minus className="h-4 w-4 text-yellow-300" />
                 </Button>
                 <Input
                   type="number"
                   value={quantity}
                   onChange={handleQuantityChange}
-                  className="w-28 text-center rounded-none border-x-0 pl-6 text-black"
+                  className="w-28 text-center rounded-none border-x-0 pl-6 text-yellow-300 bg-gray-700/90"
                   min="1"
                 />
                 <Button
@@ -174,12 +174,12 @@ export function NftMint(props: Props) {
                   size="icon"
                   onClick={increaseQuantity}
                   aria-label="Increase quantity"
-                  className="rounded-l-none"
+                  className="rounded-l-none bg-lime-700/90 hover: bg-lime-500/90"
                 >
-                  <Plus className="h-4 w-4" />
+                  <Plus className="h-4 w-4 text-yellow-300" />
                 </Button>
               </div>
-              <div className="text-base pr-1 font-semibold text-white">
+              <div className="text-base pr-1 font-semibold text-lime-500">
                 Total: {props.pricePerToken * quantity} {props.currencySymbol}
               </div>
             </div>
@@ -193,7 +193,7 @@ export function NftMint(props: Props) {
               <Label
                 htmlFor="custom-address"
                 className={`${
-                  useCustomAddress ? "text-white" : "text-gray-400"
+                  useCustomAddress ? "text-white" : "text-yellow-300"
                 } cursor-pointer`}
               >
                 Mint to a custom address
@@ -243,8 +243,8 @@ export function NftMint(props: Props) {
                         }
                 }
                 style={{
-                  backgroundColor: "#111827",
-                  color: "white",
+                  backgroundColor: "#87cf00ff",
+                  color: "lime",
                   width: "100%",
                 }}
                 disabled={isMinting}
@@ -269,7 +269,7 @@ export function NftMint(props: Props) {
         <div className="mt-6 flex flex-col sm:flex-row gap-4 max-w-md w-full">
           <Button
             asChild
-            className="bg-gray-999 text-white hover:bg-gray-900 flex-1"
+            className="bg-gray-999 text-yellow-300 hover:bg-lime-700/85 flex-1"
           >
             <a href="https://jolted.one" target="_blank" rel="noopener noreferrer">
               Physical Shop
@@ -277,9 +277,9 @@ export function NftMint(props: Props) {
           </Button>
           <Button
             asChild
-            className="bg-gray-999 text-white hover:bg-gray-900 flex-1"
+            className="bg-gray-999 text-yellow-300 hover:bg-lime-700/85 flex-1"
           >
-            <a href="https://www.fractalvisions.io/collections/0x93658198a45f5d14af234708a8333b0f78ae20e1/collection" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.fractalvisions.io/mint/living-crystals" target="_blank" rel="noopener noreferrer">
               Fractal Visions Marketplace
             </a>
           </Button>
@@ -287,7 +287,7 @@ export function NftMint(props: Props) {
 
         {/* Toast */}
         {true && (
-          <Toast className="fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded-md">
+          <Toast className="fixed bottom-4 right-4 bg-lime-500 text-white p-4 rounded-md">
             Successfully minted {quantity} NFT{quantity > 1 ? "s" : ""}
             {useCustomAddress && customAddress ? ` to ${customAddress}` : ""}!
           </Toast>
